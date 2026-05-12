@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recursos Multimídia — Cap. 4 / Ativ. 4</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Recursos Multimídia do Ambiente Virtual de Aprendizagem</h1>
+    <p>
+      Exemplos de incorporação de mídias utilizando recursos semânticos do HTML5.
+    </p>
+  </header>
+
+  <main>
+
+    <!-- BLOCO 1 -->
+    <section>
+      <h2>Vídeo com legenda e poster</h2>
+
+      <figure>
+        <video
+          controls
+          width="800"
+          height="450"
+          poster="poster-aula.jpg"
+          preload="metadata">
+
+          <source src="videos/aula-html.mp4" type="video/mp4">
+          <source src="videos/aula-html.webm" type="video/webm">
+
+          <track
+            src="legendas/aula-html.vtt"
+            kind="subtitles"
+            srclang="pt"
+            label="Português"
+            default>
+
+          <p>
+            Seu navegador não suporta vídeo HTML5.
+            <a href="videos/aula-html.mp4">
+              Clique aqui para baixar o vídeo.
+            </a>
+          </p>
+
+        </video>
+
+        <figcaption>
+          Aula introdutória sobre HTML5 com exemplos de estrutura semântica.
+          Fonte: material didático do curso de Sistemas de Informação.
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- BLOCO 2 -->
+    <section>
+      <h2>Áudio com fallback</h2>
+
+      <figure>
+        <audio controls preload="metadata">
+
+          <source src="audios/podcast-web.mp3" type="audio/mpeg">
+          <source src="audios/podcast-web.ogg" type="audio/ogg">
+
+          <p>
+            Seu navegador não suporta áudio HTML5.
+            <a href="audios/podcast-web.mp3">
+              Clique aqui para baixar o áudio.
+            </a>
+          </p>
+
+        </audio>
+
+        <figcaption>
+          Podcast: Introdução às Tecnologias Web —
+          <a href="transcricao.html">Ler transcrição</a>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- BLOCO 3 -->
+    <section>
+      <h2>Vídeo externo incorporado</h2>
+
+      <figure>
+        <iframe
+          width="800"
+          height="450"
+          src="https://www.youtube-nocookie.com/embed/UB1O30fR-EE"
+          title="Curso de HTML5 para iniciantes em português"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+
+        <figcaption>
+          Vídeo educacional sobre HTML5 do canal Traversy Media,
+          incorporado via YouTube.
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- BLOCO 4 -->
+    <section>
+      <h2>Imagem responsiva com picture</h2>
+
+      <figure>
+        <picture>
+
+          <source
+            media="(min-width: 768px)"
+            srcset="img/banner-wide.jpg">
+
+          <img
+            src="img/banner-mobile.jpg"
+            alt="Banner ilustrando desenvolvimento web com notebook, códigos e elementos gráficos"
+            width="800"
+            height="400">
+
+        </picture>
+
+        <figcaption>
+          Banner promocional do curso de Desenvolvimento Web,
+          adaptado para diferentes tamanhos de tela.
+        </figcaption>
+      </figure>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Nome: Alex Davi soares da silva</p>
+    <p>Matrícula: 2026319061</p>
+    <p>Data: 12/05/2026</p>
+  </footer>
+
+</body>
+</html>
